@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.form{
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    padding: 1.5rem;
+    width: 500px;
+}
+
+.form h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-container,
+.form-group{
+    display: grid;
+}
+
+.form-container{
+    row-gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-group{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .7rem;
+}
+
+.user,
+.icon{
+    color: #fff;
+    font-size: 27px;
+}
+
+.form-input{
+    border-bottom: 1.5px solid #fff;
+    position: relative;
+}
+
+.form-input.active{
+    border-color: #c40049;
+}
+
+.error-message{
+    color: #c40049;
+    text-align: center;
+}
+
+.form-text{
+    width: 100%;
+    padding-block: .8rem;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-label{
+    position: absolute;
+    top: 13px;
+    left: 0;
+    color: #fff;
+    transition: top .3s, font-size .3s;
+}
+
+.icon{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.form-text:focus + .form-label{
+    top: -13px;
+    font-size: 12px;
+}
+
+.form-text:not(:placeholder-shown).form-text:not(:focus) + .form-label{
+    top: -13px;
+    font-size: 12px;
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.checked{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.remember{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember:hover{
+    text-decoration: underline;
+}
+
+.forgot{
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    padding-block: .7rem;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-bottom: .5rem;
+}
+
+.btn:hover{
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.397);
+    transform: translateY(-2px);
+}
+
+.alredy span{
+    color: #fff;
+}
+
+.alredy span a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.alredy span a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 480px){
+    .form {
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    padding: 1rem;
+    width: 370px;
+}
+}
