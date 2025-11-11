@@ -25,6 +25,7 @@ body{
     align-items: baseline;
     justify-content: space-between;
     padding: 20px 10%;
+    flex-wrap: wrap;
 }
 
 .logoDiv{
@@ -113,6 +114,7 @@ body{
     width: 200%;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .homeQuiz{
